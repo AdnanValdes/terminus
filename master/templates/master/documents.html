@@ -1,0 +1,24 @@
+{% extends "master/layout.html" %}
+
+{% block title %}
+    Documents
+{% endblock %}
+
+
+
+{% block body %}
+
+    <h1>Documents</h1>
+    <table>
+        <thead>
+            <th>Document</th>
+            <th>Expiry</th>
+        </thead>
+        {% for document in documents %}
+            <tr>
+                <td>{{document.document}}</td>
+                <td>{{document.expiry}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
