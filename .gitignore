@@ -1,5 +1,7 @@
 # Other
 *.zip
+*/pytest_cache/*
+*__pycache__*
 
 # Django #
 *.log
