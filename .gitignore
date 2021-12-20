@@ -3,6 +3,7 @@
 */pytest_cache/*
 *__pycache__*
 *.pyc
+*.vscode
 
 # Django #
 *.log
