@@ -44,6 +44,12 @@ class Book(models.Model):
 		"""Returns the URL to access a detail record for this book"""
 		return reverse('book-detail', args=[str(self.id)])
 
+	def display_genre(self):
+		"""Create a string for the Genre, used to display genre in Admin"""
+		return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+	display_genre.short_description = "Genre"
+
 class BookInstance(models.Model):
 	"""Model representing a specific copy of a book"""
 	# UUIDField is used for the id field to set it as the primary_key for this model. This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
