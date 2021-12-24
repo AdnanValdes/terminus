@@ -1,6 +1,7 @@
 # Other
 *.zip
 */pytest_cache/*
+*/__pycache__/*
 *__pycache__*
 *.pyc*
 *.vscode
@@ -142,3 +143,5 @@ GitHub.sublime-settings
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+terminus/__pycache__/__init__.cpython-39.pyc
+terminus/__pycache__/settings.cpython-39.pyc
