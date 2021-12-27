@@ -16,11 +16,13 @@ def index(request):
 	# Another option for counting. `all()` is implied by default
 	num_authors = Author.objects.count()
 
+	num_scifi = Book.objects.filter(genre__name__icontains="sci-fi").count()
 	context = {
 		'num_books':num_books,
 		'num_instances':num_instances,
 		'num_instances_available':num_instances_available,
-		'num_authors':num_authors
+		'num_authors':num_authors,
+		'num_scifi':num_scifi
 	}
 
 	# Render HTML template index.html and pass data from the context variable
