@@ -41,7 +41,10 @@ class Book(models.Model):
 		return self.title
 
 	def get_absolute_url(self):
-		"""Returns the URL to access a detail record for this book"""
+		"""Returns the URL to access a detail record for this book
+        Note that the 'book-detail' name is the name asigned to a URL in
+        catalog/urls.py as an argument to `path()`
+        """
 		return reverse('book-detail', args=[str(self.id)])
 
 	def display_genre(self):
